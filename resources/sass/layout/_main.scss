@@ -1,0 +1,173 @@
+.slider {
+    position: relative;
+    display: flex;
+    margin-top: 8rem;
+    flex-direction: column;
+    @include min(991) {
+        flex-direction: row;
+        align-items: center;
+        padding-top: 6rem;
+    }
+
+    @include min(1440) {
+        margin: 10.2rem 0 9.8rem 0;
+    }
+    .info {
+        @include min(991) {
+            padding: 0 12.2rem 0 0;
+        }
+        .meta {
+            .title {
+                margin-bottom: 3rem;
+            }
+
+            .desc {
+                font-size: 1.8rem;
+            }
+        }
+        .slider-nav {
+            margin-top: 4.3rem;
+            @include min(1024) {
+                margin-top: 6.6rem;
+            }
+            display: flex;
+            > * {
+                cursor: pointer;
+                &:not(:last-child) {
+                    margin-right: 2rem;
+                }
+            }
+            img {
+                max-width: 7rem;
+                @include min(1024) {
+                    max-width: 8.2rem;
+                }
+            }
+        }
+    }
+
+    .slider-cont {
+        @include max(768) {
+            display: flex;
+            flex-direction: column;
+            margin-top: 3.8rem;
+        }
+        .slider-about {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 4.6rem 0 2.9rem 0;
+            @include max(768) {
+                order: 1;
+            }
+            @include min(768) {
+                margin: 4.6rem 0 -2.9rem 0;
+            }
+            @include min(991) {
+                margin: 0 0 2.9rem -3rem;
+                margin-left: -3rem;
+                margin-bottom: 2.9rem;
+            }
+            .before,
+            .after {
+                position: relative;
+                img {
+                    display: none;
+                    @include min(768) {
+                        display: block;
+                    }
+                }
+                h3 {
+                    font-weight: bold;
+                    @include min(768) {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+            .meta {
+                margin: -3rem 1.2rem 0 1.2rem;
+            }
+            .weight {
+                margin-bottom: 0.6rem;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .top-slider {
+        .slick-list {
+            max-width: 41rem;
+            padding: 0 2% 0 0;
+            border-radius: 15px;
+            @include min(420) {
+                max-width: 41rem;
+                padding: 0 2% 0 0;
+                margin: 0;
+                overflow: visible;
+                -webkit-clip-path: inset(-100vw -100vw -100vw 0);
+                clip-path: inset(-100vw -100vw -100vw 0);
+            }
+            .slick-slide {
+                opacity: 0.15;
+                transition: opacity 0.25s;
+                &.slick-current {
+                    opacity: 1;
+                }
+                img {
+                    border-radius: 15px;
+                }
+            }
+        }
+
+        .slick-dots {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 2.9rem 0;
+            list-style-type: none;
+            max-width: 38.5rem;
+            @include max(991) {
+                position: absolute;
+                padding: 0;
+                right: 0;
+                bottom: calc(100% + 19.75rem);
+            }
+            @include max(768) {
+                bottom: calc(100% + 6.4rem);
+            }
+
+            li {
+                margin: 0 0.5rem;
+            }
+
+            button {
+                display: block;
+                width: 1.6rem;
+                height: 1.6rem;
+                padding: 0;
+
+                border: 1px solid $purple-emperor;
+                border-radius: 100%;
+                background-color: transparent;
+
+                text-indent: -9999px;
+            }
+
+            li.slick-active button {
+                background-color: $purple-emperor;
+            }
+        }
+    }
+
+    > div {
+        @include min(991) {
+            width: 50%;
+        }
+    }
+}
+.placeholder {
+    margin-top: 5rem;
+}

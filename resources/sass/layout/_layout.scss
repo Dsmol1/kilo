@@ -1,0 +1,39 @@
+@if variable-exists(container_wrapper_width) {
+	.global-container {
+		max-width: $container_wrapper_width;
+		margin: 0 auto;
+	}
+}
+@if variable-exists(content_wrapper_width) {
+	.content-container {
+		max-width: $content_wrapper_width;
+		margin: 0 auto;
+	}
+}
+
+@if variable-exists(container_padding_sm) {
+	.global-container {
+		@include min(320) {
+			padding-left: $container_padding_sm;
+			padding-right: $container_padding_sm;
+		}
+	}
+}
+
+@if variable-exists(container_padding_md) {
+	.global-container {
+		@include min(768) {
+			padding-left: $container_padding_md;
+			padding-right: $container_padding_md;
+		}
+	}
+}
+
+@if variable-exists(container_padding) {
+	.global-container {
+		@include min(1024) {
+			padding-left: $container_padding;
+			padding-right: $container_padding;
+		}
+	}
+}

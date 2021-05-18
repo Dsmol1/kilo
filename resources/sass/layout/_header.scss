@@ -1,0 +1,139 @@
+section.top {
+    position: relative;
+    padding-top: 2rem;
+    overflow: hidden;
+    .hero {
+        margin: 33rem 0 0 0;
+        position: relative;
+        @include min(768) {
+            margin: 0;
+            padding-top: 10rem;
+        }
+        @include min(1200) {
+            height: calc(100vh - 4rem);
+        }
+
+        .info {
+            text-align: center;
+            @include min(768) {
+                width: 50%;
+                text-align: left;
+            }
+            .subtitle {
+                margin-bottom: 1rem;
+                font-size: 1.6rem;
+            }
+            .title {
+                margin-bottom: 1.5rem;
+                @include min(768) {
+                    margin-bottom: 3rem;
+                }
+            }
+            .desc {
+                margin-bottom: 3rem;
+                font-size: 1.4rem;
+                @include min(768) {
+                    font-size: 1.6rem;
+                    margin-bottom: 6rem;
+                }
+            }
+            .overline {
+                font-size: 1.4rem;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                margin-bottom: 2rem;
+            }
+        }
+        .btn-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @include min(575) {
+                flex-direction: row;
+            }
+            > * {
+                &:not(:last-child) {
+                    margin: 0 0 2rem 0;
+                    @include min(575) {
+                        margin: 0 2rem 0 0;
+                    }
+                }
+            }
+        }
+
+        .scroll-down {
+            display: none;
+            text-align: center;
+            margin-top: 6rem;
+            position: absolute;
+            bottom: 0.8rem;
+            left: 50%;
+            transform: translate(-50%, 0);
+            @include min(1024) {
+                display: block;
+            }
+            button {
+                cursor: pointer;
+                transition: transform 0.15s;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+    &:before,
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+    }
+    &:before {
+        right: 0;
+        top: 50rem;
+        bottom: 0;
+        left: -25rem;
+        background: transparent url(../img/decors/hero_bg2.png) no-repeat 50%;
+        background-size: contain;
+        background-position: left;
+        z-index: -1;
+        max-height: 523px;
+
+        @include min(768) {
+            left: -42.8rem;
+            top: 38.1rem;
+            max-height: 771px;
+        }
+        @include min(1440) {
+            left: -29.8rem;
+        }
+    }
+    &:after {
+        right: -3.5rem;
+        top: -2.7rem;
+        bottom: 0;
+        left: -6rem;
+        background: transparent url(../img/decors/hero_bg.png) no-repeat 50%;
+        background-size: contain;
+        background-position: top;
+        z-index: -1;
+        max-height: 470px;
+        @include min(768) {
+            background-position: right;
+            right: -8.5rem;
+            top: -11.4rem;
+            left: 0;
+            max-height: 665px;
+        }
+        @include min(1200) {
+            top: -2.7rem;
+            right: -5rem;
+        }
+        @include min(1440) {
+            max-height: 988px;
+        }
+        @include min(1920) {
+            right: 15.7rem;
+            top: -11.4rem;
+        }
+    }
+}

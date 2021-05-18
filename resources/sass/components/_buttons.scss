@@ -1,0 +1,27 @@
+.btn {
+    display: block;
+    text-align: center;
+    max-width: 27rem;
+    width: 100%;
+    color: #fff;
+    height: 6rem;
+    line-height: 6rem;
+    border-radius: 15px;
+    text-transform: uppercase;;
+    &--green {
+        background-color: $spandex-green;
+    }
+    &--purple {
+        background-color: $purple-emperor;
+    }
+    &--white {
+        background-color: #fff;
+        color: $black-respberry;
+        border: 1px solid $black-respberry;
+    }
+    &--small {
+        max-width: 21.7rem;
+        height: 4rem;
+        line-height: 4rem;;
+    }
+}

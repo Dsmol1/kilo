@@ -1,0 +1,78 @@
+// Abstracts
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+// Base
+@import "base/reset";
+@import "base/fonts";
+
+// Third party libs/plugins
+// @import "vendor/*";
+
+// Components
+@import "components/buttons";
+
+// Layout
+@import "layout/layout";
+@import "layout/grid";
+@import "layout/header";
+@import "layout/nav";
+@import "layout/footer";
+@import "layout/main";
+
+// Pages
+@import "pages/home";
+
+// Global
+html,body {
+	font-size: $base_size;
+	height: 100%;
+}
+
+body, p, td, div{
+	font-family: $font;
+	color: $text_color;
+	@include font-size($p-font-sizes); 
+}
+
+
+//links
+a {
+	color: $link_color;
+}
+
+// img
+img {
+	display: block;
+}
+
+//Headings
+// Classes as .h2 needed for span elements for W3C validation inside <a> elements
+h1, .h1 {
+	@include font-size($h1-font-sizes);
+	font-weight:700; 
+	color: $black-respberry;
+}
+h2, .h2 {
+	@include font-size($h2-font-sizes);
+	font-weight:700;
+}
+h3, .h3 {
+	@include font-size($h3-font-sizes);
+	font-weight:700;
+}
+h4, .h4 {
+	@include font-size($h4-font-sizes);
+	font-weight:700;
+}
+h5, .h5 {
+	@include font-size($h5-font-sizes);
+	font-weight:700;
+}
+h6, .h6 {
+	@include font-size($h6-font-sizes);
+}
+
+strong {
+	font-weight: bold;
+}

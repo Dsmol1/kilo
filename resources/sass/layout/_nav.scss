@@ -1,0 +1,49 @@
+.header {
+    position: relative;
+    .mobile-logo {
+        display: block;
+        margin: 0 auto;
+        a {
+            display: block;
+            img {
+                margin: 0 auto;
+            }
+        }
+        @include min(768) {
+            display: none;;
+        }
+    }
+    nav {
+        display: none;
+        width: 100%;
+        @include min(768) {
+            display: flex;
+        }
+        > ul {
+            margin-left: auto;
+            display: flex;
+            li {
+                &:not(:last-child) {
+                    margin-right: 1rem;
+                }
+                &:not(.my-plan) {
+                    a {
+                        display: block;
+                        padding: 0 2rem;
+                        height: 40px;
+                        line-height: 40px;
+                        text-transform: uppercase;
+                        transition: color 0.15s;
+                        &:hover,
+                        &:focus {
+                            color: lighten($link_color, 45%);
+                        }
+                    }
+                }
+                &.my-plan {
+                    width: 21.7rem;
+                }
+            }
+        }
+    }
+}
